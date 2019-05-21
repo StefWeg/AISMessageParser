@@ -80,11 +80,6 @@ int main(int argc, const char * argv[])
         return -1;
     }
     
-    // Initialize STL maps
-    initASCIIToBytesMap();
-    initMessageTypesMap();
-    initNavigationStatusMap();
-    
     // Prepare file reader and writer
     string readFilePath(argv[1]);
     ifstream file_reader(readFilePath);
@@ -95,6 +90,11 @@ int main(int argc, const char * argv[])
     }
     string outputDirPath(argv[2]);
     ofstream file_writer;
+    
+    // Initialize STL maps
+    initASCIIToBytesMap();
+    initMessageTypesMap();
+    initNavigationStatusMap();
     
     // Read input file line by line
     cout << "Processing data" << endl;
