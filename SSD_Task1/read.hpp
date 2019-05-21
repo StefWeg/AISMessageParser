@@ -25,13 +25,13 @@ using namespace std;
  *    \brief        Structure for storing AIS message components
  */
 struct AISMessage {
-    string format;
-    string msgCnt;
-    string msgNum;
-    string seqID;
-    string channel;
-    string payload;
-    string size;
+    string format;  /*!< Contains format information */
+    string msgCnt;  /*!< Contains message counter */
+    string msgNum;  /*!< Contains message number */
+    string seqID;   /*!< Contains sequence ID */
+    string channel; /*!< Contains channel number */
+    string payload; /*!< Contains message payload */
+    string size;    /*!< Contains size information */
 };
 
 /**
@@ -39,13 +39,13 @@ struct AISMessage {
  *    \brief        Structure for storing components of text line read from file
  */
 struct lineContent {
-    string date;
-    string time;
-    AISMessage AISMsg;
+    string date;        /*!< Contains date information */
+    string time;        /*!< Contains time information */
+    AISMessage AISMsg;  /*!< Contains AIS message structure */
 };
 
 /**
- *    \fn           splitElementsOfAISMessage
+ *    \fn           void splitElementsOfAISMessage(string& AISString, AISMessage& AISMsg)
  *    \brief        Splits comma separated elements of AIS message
  *    \param[in]    AISString
  *                    AIS message string
@@ -55,7 +55,7 @@ struct lineContent {
 void splitElementsOfAISMessage(string& AISString, AISMessage& AISMsg);
 
 /**
- *    \fn           readLineFromFile
+ *    \fn           bool readLineFromFile(lineContent& line, ifstream& file_reader)
  *    \brief        Main program performing AIS messages processing
  *    \param[out]    line
  *                    Structure for storing line components

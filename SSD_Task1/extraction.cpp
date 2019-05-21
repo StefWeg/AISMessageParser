@@ -15,13 +15,13 @@
 #include "extraction.hpp"
 
 /**
- *    \var      ASCIItoBytes
+ *    \var      map<char,byte> ASCIItoBytes
  *    \brief    Container mapping ASCII chars to binary values
  */
 map<char,byte> ASCIItoBytes;
 
 /**
- *    \fn           initASCIIToBytesMap
+ *    \fn           void initASCIIToBytesMap()
  *    \brief        Assigns binary values to ASCII characters
  *    \note         Used for decoding AIS messages
  *    \warning      This function must be run before using ASCIItoBytes map
@@ -95,7 +95,7 @@ void initASCIIToBytesMap()
 }
 
 /**
- *    \fn           convertAISMsgStringToBinaryFormat
+ *    \fn           void convertAISMsgStringToBinaryFormat(string& msgString, byte* msgBin)
  *    \brief        Converts AIS message string into byte array
  *    \param[in]    msgString
  *                    AIS message string
@@ -111,7 +111,7 @@ void convertAISMsgStringToBinaryFormat(string& msgString, byte* msgBin)
 }
 
 /**
- *    \fn           getFieldValue
+ *    \fn           unsigned getFieldValue(byte* msg, byte idx, byte len)
  *    \brief        Extracts value from byte array given starting bit index and lenght of bit field
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -142,7 +142,7 @@ unsigned getFieldValue(byte* msg, byte idx, byte len)
 }
 
 /**
- *    \fn           extractMessageType
+ *    \fn           unsigned extractMessageType(byte* msg)
  *    \brief        Extracts value of parameter 'Message Type' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -154,7 +154,7 @@ unsigned extractMessageType(byte* msg)
 }
 
 /**
- *    \fn           extractRepeatIndicator
+ *    \fn           unsigned extractRepeatIndicator(byte* msg)
  *    \brief        Extracts value of parameter 'Repeat Indicator' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -166,7 +166,7 @@ unsigned extractRepeatIndicator(byte* msg)
 }
 
 /**
- *    \fn           extractMMSI
+ *    \fn           unsigned extractMMSI(byte* msg)
  *    \brief        Extracts value of parameter 'MMSI' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -178,7 +178,7 @@ unsigned extractMMSI(byte* msg)
 }
 
 /**
- *    \fn           extractNavigationStatus
+ *    \fn           unsigned extractNavigationStatus(byte* msg)
  *    \brief        Extracts value of parameter 'Navigation Status' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -190,7 +190,7 @@ unsigned extractNavigationStatus(byte* msg)
 }
 
 /**
- *    \fn           extractRateOfTurn
+ *    \fn           unsigned extractRateOfTurn(byte* msg)
  *    \brief        Extracts value of parameter 'Rate Of Turn' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -202,7 +202,7 @@ unsigned extractRateOfTurn(byte* msg)
 }
 
 /**
- *    \fn           extractSpeedOverGround
+ *    \fn           unsigned extractSpeedOverGround(byte* msg)
  *    \brief        Extracts value of parameter 'Speed Over Ground' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -214,7 +214,7 @@ unsigned extractSpeedOverGround(byte* msg)
 }
 
 /**
- *    \fn           extractPositionAccuracy
+ *    \fn           unsigned extractPositionAccuracy(byte* msg)
  *    \brief        Extracts value of parameter 'Position Accuracy' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -226,7 +226,7 @@ unsigned extractPositionAccuracy(byte* msg)
 }
 
 /**
- *    \fn           extractLongitude
+ *    \fn           unsigned extractLongitude(byte* msg)
  *    \brief        Extracts value of parameter 'Longitude' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -238,7 +238,7 @@ unsigned extractLongitude(byte* msg)
 }
 
 /**
- *    \fn           extractLatitude
+ *    \fn           unsigned extractLatitude(byte* msg)
  *    \brief        Extracts value of parameter 'Latitude' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -250,7 +250,7 @@ unsigned extractLatitude(byte* msg)
 }
 
 /**
- *    \fn           extractCourseOverGround
+ *    \fn           unsigned extractCourseOverGround(byte* msg)
  *    \brief        Extracts value of parameter 'Course Over Ground' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -262,7 +262,7 @@ unsigned extractCourseOverGround(byte* msg)
 }
 
 /**
- *    \fn           extractTrueHeading
+ *    \fn           unsigned extractTrueHeading(byte* msg)
  *    \brief        Extracts value of parameter 'True Heading' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -274,7 +274,7 @@ unsigned extractTrueHeading(byte* msg)
 }
 
 /**
- *    \fn           extractTimeStamp
+ *    \fn           unsigned extractTimeStamp(byte* msg)
  *    \brief        Extracts value of parameter 'Time Stamp' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -286,7 +286,7 @@ unsigned extractTimeStamp(byte* msg)
 }
 
 /**
- *    \fn           extractManeuverIndicator
+ *    \fn           unsigned extractManeuverIndicator(byte* msg)
  *    \brief        Extracts value of parameter 'Maneuver Indicator' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -298,7 +298,7 @@ unsigned extractManeuverIndicator(byte* msg)
 }
 
 /**
- *    \fn           extractRAIMFlag
+ *    \fn           unsigned extractRAIMFlag(byte* msg)
  *    \brief        Extracts value of parameter 'RAIM Flag' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format
@@ -310,7 +310,7 @@ unsigned extractRAIMFlag(byte* msg)
 }
 
 /**
- *    \fn           extractRadioStatus
+ *    \fn           unsigned extractRadioStatus(byte* msg)
  *    \brief        Extracts value of parameter 'Radio Status' from AIS message in binary format
  *    \param[in]    msg
  *                    AIS message in binary format

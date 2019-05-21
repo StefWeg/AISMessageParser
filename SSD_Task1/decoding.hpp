@@ -19,14 +19,14 @@
 using namespace std;
 
 /**
- *    \fn           initMessageTypesMap
+ *    \fn           void initMessageTypesMap()
  *    \brief        Assigns names to values of 'Message Type' parameter
  *    \note         Used for interpreting parameter values of AIS messages
  *    \warning      This function must be run before using MessageTypes map
  */
 void initMessageTypesMap();
 /**
- *    \fn           initNavigationStatusMap
+ *    \fn           void initNavigationStatusMap()
  *    \brief        Assigns names to values of 'Navigation Status' parameter
  *    \note         Used for interpreting parameter values of AIS messages
  *    \warning      This function must be run before using NavigationStatus map
@@ -34,7 +34,7 @@ void initMessageTypesMap();
 void initNavigationStatusMap();
 
 /**
- *    \fn           getMessageType
+ *    \fn           string getMessageType(unsigned MsgType)
  *    \brief        Interprets value of the parameter 'Message Type' and returns textual description
  *    \param[in]    MsgType
  *                    Value of the parameter 'Message Type'
@@ -43,7 +43,7 @@ void initNavigationStatusMap();
  */
 string getMessageType(unsigned MsgType);
 /**
- *    \fn           getRepeatIndicator
+ *    \fn           string getRepeatIndicator(unsigned RepeatInd)
  *    \brief        Interprets value of the parameter 'Repeat Indicator' and returns textual description
  *    \param[in]    RepeatInd
  *                    Value of the parameter 'Repeat Indicator'
@@ -51,7 +51,7 @@ string getMessageType(unsigned MsgType);
  */
 string getRepeatIndicator(unsigned RepeatInd);
 /**
- *    \fn           getMMSI
+ *    \fn           string getMMSI(unsigned MMSI)
  *    \brief        Interprets value of the parameter 'MMSI' and returns textual description
  *    \param[in]    MMSI
  *                    Value of the parameter 'MMSI'
@@ -59,7 +59,7 @@ string getRepeatIndicator(unsigned RepeatInd);
  */
 string getMMSI(unsigned MMSI);
 /**
- *    \fn           getNavigationStatus
+ *    \fn           string getNavigationStatus(unsigned NavStatus)
  *    \brief        Interprets value of the parameter 'Navigation Status' and returns textual description
  *    \param[in]    NavStatus
  *                    Value of the parameter 'Navigation Status'
@@ -68,7 +68,7 @@ string getMMSI(unsigned MMSI);
  */
 string getNavigationStatus(unsigned NavStatus);
 /**
- *    \fn           getRateOfTurn
+ *    \fn           string getRateOfTurn(unsigned RateOfTurn)
  *    \brief        Interprets value of the parameter 'Rate Of Turn' and returns textual description
  *    \param[in]    RateOfTurn
  *                    Value of the parameter 'Rate Of Turn'
@@ -76,7 +76,7 @@ string getNavigationStatus(unsigned NavStatus);
  */
 string getRateOfTurn(unsigned RateOfTurn);
 /**
- *    \fn           getSpeedOverGround
+ *    \fn           string getSpeedOverGround(unsigned SpeedOverGround)
  *    \brief        Interprets value of the parameter 'Speed Over Ground' and returns textual description
  *    \param[in]    SpeedOverGround
  *                    Value of the parameter 'Speed Over Ground'
@@ -84,7 +84,7 @@ string getRateOfTurn(unsigned RateOfTurn);
  */
 string getSpeedOverGround(unsigned SpeedOverGround);
 /**
- *    \fn           getPositionAccuracy
+ *    \fn           string getPositionAccuracy(unsigned PositionAccuracy)
  *    \brief        Interprets value of the parameter 'Position Accuracy' and returns textual description
  *    \param[in]    PositionAccuracy
  *                    Value of the parameter 'Position Accuracy'
@@ -92,7 +92,7 @@ string getSpeedOverGround(unsigned SpeedOverGround);
  */
 string getPositionAccuracy(unsigned PositionAccuracy);
 /**
- *    \fn           getLongitude
+ *    \fn           string getLongitude(unsigned Longitude)
  *    \brief        Interprets value of the parameter 'Longitude' and returns textual description
  *    \param[in]    Longitude
  *                    Value of the parameter 'Longitude'
@@ -100,7 +100,7 @@ string getPositionAccuracy(unsigned PositionAccuracy);
  */
 string getLongitude(unsigned Longitude);
 /**
- *    \fn           getLatitude
+ *    \fn           string getLatitude(unsigned Latitude)
  *    \brief        Interprets value of the parameter 'Latitude' and returns textual description
  *    \param[in]    Latitude
  *                    Value of the parameter 'Latitude'
@@ -108,7 +108,7 @@ string getLongitude(unsigned Longitude);
  */
 string getLatitude(unsigned Latitude);
 /**
- *    \fn           getCourseOverGround
+ *    \fn           string getCourseOverGround(unsigned CourseOverGround)
  *    \brief        Interprets value of the parameter 'Course Over Ground' and returns textual description
  *    \param[in]    CourseOverGround
  *                    Value of the parameter 'Course Over Ground'
@@ -116,7 +116,7 @@ string getLatitude(unsigned Latitude);
  */
 string getCourseOverGround(unsigned CourseOverGround);
 /**
- *    \fn           getTrueHeading
+ *    \fn           string getTrueHeading(unsigned TrueHeading)
  *    \brief        Interprets value of the parameter 'True Heading' and returns textual description
  *    \param[in]    TrueHeading
  *                    Value of the parameter 'True Heading'
@@ -124,7 +124,7 @@ string getCourseOverGround(unsigned CourseOverGround);
  */
 string getTrueHeading(unsigned TrueHeading);
 /**
- *    \fn           getTimeStamp
+ *    \fn           string getTimeStamp(unsigned TimeStamp)
  *    \brief        Interprets value of the parameter 'Time Stamp' and returns textual description
  *    \param[in]    TimeStamp
  *                    Value of the parameter 'Time Stamp'
@@ -132,7 +132,7 @@ string getTrueHeading(unsigned TrueHeading);
  */
 string getTimeStamp(unsigned TimeStamp);
 /**
- *    \fn           getManeuverIndicator
+ *    \fn           string getManeuverIndicator(unsigned ManeuverIndicator)
  *    \brief        Interprets value of the parameter 'Maneuver Indicator' and returns textual description
  *    \param[in]    ManeuverIndicator
  *                    Value of the parameter 'Maneuver Indicator'
@@ -140,7 +140,7 @@ string getTimeStamp(unsigned TimeStamp);
  */
 string getManeuverIndicator(unsigned ManeuverIndicator);
 /**
- *    \fn           getRAIMFlag
+ *    \fn           string getRAIMFlag(unsigned RAIMFlag)
  *    \brief        Interprets value of the parameter 'RAIM Flag' and returns textual description
  *    \param[in]    RAIMFlag
  *                    Value of the parameter 'RAIM Flag'

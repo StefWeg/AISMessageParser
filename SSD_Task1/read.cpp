@@ -17,7 +17,7 @@
 #include "read.hpp"
 
 /**
- *    \fn           splitElementsOfAISMessage
+ *    \fn           void splitElementsOfAISMessage(string& AISString, AISMessage& AISMsg)
  *    \brief        Splits comma separated elements of AIS message
  *    \param[in]    AISString
  *                    AIS message string
@@ -43,7 +43,7 @@ void splitElementsOfAISMessage(string& AISString, AISMessage& AISMsg)
 }
 
 /**
- *    \fn           readLineFromFile
+ *    \fn           bool readLineFromFile(lineContent& line, ifstream& file_reader)
  *    \brief        Main program performing AIS messages processing
  *    \param[out]    line
  *                    Structure for storing line components

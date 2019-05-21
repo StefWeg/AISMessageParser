@@ -22,7 +22,7 @@
 using namespace std;
 
 /**
- *    \fn           decodeAISMsg
+ *    \fn           string decodeAISMsg(byte* AISMsg)
  *    \brief        Creates output string that can be written to file
  *    \param[in]    AISMsg
  *                    Pointer to byte array containing AIS message in binary format
@@ -50,7 +50,7 @@ string decodeAISMsg(byte* AISMsg)
 }
 
 /**
- *    \fn           main
+ *    \fn           int main(int argc, const char * argv[])
  *    \brief        Main program performing AIS messages processing
  *    \param[in]    argc
  *                    Parameters count

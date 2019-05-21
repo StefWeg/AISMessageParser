@@ -18,13 +18,13 @@
 using namespace std;
 
 /**
- *    \var      writeFiles
+ *    \var      vector<string> writeFiles
  *    \brief    Container storing names of files that program writes to
  */
 vector<string> writeFiles;
 
 /**
- *    \fn           writeToFile
+ *    \fn           void writeToFile(string& content, ofstream& file_writer, ios_base::openmode mode, string outputFilePath)
  *    \brief        Writes content to file
  *    \param[in]    content
  *                    String containing data to be written to file
@@ -47,7 +47,7 @@ void writeToFile(string& content, ofstream& file_writer, ios_base::openmode mode
 }
 
 /**
- *    \fn           putMessageInFile
+ *    \fn           void putMessageInFile(string& MMSI, string& content, ofstream& file_writer, string outputDirPath)
  *    \brief        Writes content to the file named with given MMSI number
  *    \param[in]    MMSI
  *                    MMSI number of sender (name of the file to be written to)
