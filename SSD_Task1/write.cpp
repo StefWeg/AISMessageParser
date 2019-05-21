@@ -42,7 +42,7 @@ void writeToFile(string& content, ofstream& file_writer, ios_base::openmode mode
         file_writer << content;
         file_writer.close();
     } else {
-        cout << "Could not open file: " << outputFilePath << endl;
+        cout << "(WARNING) Could not open file: " << outputFilePath << endl;
     }
 }
 

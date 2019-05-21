@@ -60,6 +60,27 @@ string decodeAISMsg(byte* AISMsg)
  */
 int main(int argc, const char * argv[])
 {
+    // Display user guide on request
+    string parameter;
+    if (argc == 1 || (parameter.assign(argv[1]) == "--help" && argc == 2)) {
+        cout << "----------------------------------------------------------" << endl;
+        cout << "USER GUIDE:" << endl;
+        cout << "\t[1st parmeter]: relative input file path" << endl;
+        cout << "\t[2nd parameter]: relative output folder file path" << endl;
+        cout << "EXAMPLE:" << endl;
+        cout << "\t'./SSD_Task1 ./AIS_messages.txt ./'" << endl;
+        cout << "----------------------------------------------------------" << endl;
+        cin.get();
+        return 0;
+    }
+    
+    // Detect wrong number of arguments
+    if (argc != 3) {
+        cout << "(ERROR) Wrong number of arguments" << endl;
+        cin.get();
+        return -1;
+    }
+    
     // Initialize STL maps
     initASCIIToBytesMap();
     initMessageTypesMap();
@@ -69,7 +90,8 @@ int main(int argc, const char * argv[])
     string readFilePath(argv[1]);
     ifstream file_reader(readFilePath);
     if ( !file_reader.is_open() ) {
-        cout << "Could not open file: " << readFilePath << endl;
+        cout << "(ERROR) Could not open input file: " << readFilePath << endl;
+        cin.get();
         return -1;
     }
     string outputDirPath(argv[2]);
@@ -108,6 +130,7 @@ int main(int argc, const char * argv[])
     }
     
     cout << endl << "Processing finished successfully" << endl;
+    cin.get();
 
     return 0;
 }
