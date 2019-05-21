@@ -3,11 +3,10 @@
  *
  * \brief Functions for writing to files.
  *
- * This file includes definitions of functions allowing for writing
- * output content to files named after MMSI numbers of senders.
+ * \details This file includes definitions of functions allowing for writing output content to files named after MMSI numbers of senders.
  *
- * Created by Adam Penczek on 10/05/2019.
- *
+ * \author  Adam Penczek
+ * \date    10/05/2019
  */
 
 #include <iostream>

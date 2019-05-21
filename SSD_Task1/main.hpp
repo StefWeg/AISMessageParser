@@ -3,10 +3,10 @@
  *
  * \brief Header file of 'main.cpp'
  *
- * This file includes common type definitions.
+ * \details This file includes common type definitions.
  *
- * Created by Stefan Węgrzyn on 11/05/2019.
- *
+ * \author  Stefan Węgrzyn
+ * \date    11/05/2019
  */
 
 #ifndef main_hpp

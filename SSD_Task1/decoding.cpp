@@ -3,10 +3,10 @@
  *
  * \brief Functions for information decoding.
  *
- * This file includes definitions of functions allowing for decoding of parameter's values according to AIVDM protocol.
+ * \details This file includes definitions of functions allowing for decoding of parameter's values according to AIVDM protocol.
  *
- * Created by Stefan Węgrzyn on 04/05/2019.
- *
+ * \author  Stefan Węgrzyn
+ * \date    04/05/2019
  */
 /*
  * AIVDM protocol decoding: <a href="http://catb.org/gpsd/AIVDM.html#_type_12_addressed_safety_related_message">More info</a>

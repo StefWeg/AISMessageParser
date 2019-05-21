@@ -3,11 +3,10 @@
  *
  * \brief Header file of 'extraction.cpp'.
  *
- * This file includes declarations of functions allowing for conversion of AIS message
- * to binary format and extraction of values of parameters included inside.
+ * \details This file includes declarations of functions allowing for conversion of AIS message to binary format and extraction of values of parameters included inside.
  *
- * Created by Krystian Chorab on 08/05/2019.
- *
+ * \author  Krystian Chorab
+ * \date    08/05/2019
  */
 
 #ifndef extraction_hpp

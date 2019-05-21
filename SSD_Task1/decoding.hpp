@@ -3,10 +3,10 @@
  *
  * \brief Header file of 'decoding.cpp'.
  *
- * This file includes declarations of functions allowing for decoding of parameter's values according to AIVDM protocol.
+ * \details This file includes declarations of functions allowing for decoding of parameter's values according to AIVDM protocol.
  *
- * Created by Stefan Węgrzyn on 04/05/2019.
- *
+ * \author  Stefan Węgrzyn
+ * \date    04/05/2019
  */
 
 #ifndef decoding_hpp

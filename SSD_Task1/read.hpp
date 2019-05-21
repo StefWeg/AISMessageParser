@@ -3,10 +3,10 @@
  *
  * \brief Header file of 'read.cpp'.
  *
- * This file includes definitions of structures and declarations of functions used for reading data from text file.
+ * \details This file includes definitions of structures and declarations of functions used for reading data from text file.
  *
- * Created by Paweł Świąder on 07/05/2019.
- *
+ * \author  Paweł Świąder
+ * \date    07/05/2019
  */
 
 #ifndef read_hpp

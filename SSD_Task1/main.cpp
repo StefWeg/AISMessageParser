@@ -3,11 +3,10 @@
  *
  * \brief Main program source file
  *
- * This file contains program code that reads raw AIS messages from file and writes
- * decoded messages of type 1 and 2 into files named after MMSI number of the sender.
+ * \details This file contains program code that reads raw AIS messages from file and writes decoded messages of type 1 and 2 into files named after MMSI number of the sender.
  *
- * Created by Stefan Węgrzyn on 11/05/2019.
- *
+ * \author  Stefan Węgrzyn
+ * \date    11/05/2019
  */
 
 #include <iostream>

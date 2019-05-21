@@ -3,11 +3,10 @@
  *
  * \brief Functions for file reading.
  *
- * This file includes definitions of functions allowing for reading subsequent
- * lines from text file and preparing data to further processing.
+ * \details This file includes definitions of functions allowing for reading subsequent lines from text file and preparing data to further processing.
  *
- * Created by Paweł Świąder on 07/05/2019.
- *
+ * \author  Paweł Świąder
+ * \date    07/05/2019
  */
 
 #include <iostream>
